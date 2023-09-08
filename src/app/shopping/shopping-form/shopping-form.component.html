@@ -1,0 +1,54 @@
+<form #myForm="ngForm" (ngSubmit)="createIngredient()">
+  <div class="form-row align-items-center">
+    <div class="col-sm-3 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">N</div>
+        </div>
+        <input type="text" class="form-control" name="ingredName" placeholder="Ingredient Name" ngModel required #ingredName="ngModel">
+        <span class="text-danger" *ngIf="!ingredName.valid && ingredName.touched">Ingredient Name is required</span>
+      </div>
+    </div>
+    <div class="col-sm-3 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">B</div>
+        </div>
+        <input type="text" class="form-control" name="ingredBrand" placeholder="Ingredient Brand" ngModel required #ingredBrand="ngModel">
+        <span class="text-danger" *ngIf="!ingredBrand.valid && ingredBrand.touched">Ingredient Brand is required</span>
+      </div>
+    </div>
+    <div class="col-sm-3 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Q</div>
+        </div>
+        <input type="text" class="form-control" name="ingredQty" placeholder="Ingredient Quantity" ngModel required #ingredQty="ngModel">
+        <span class="text-danger" *ngIf="!ingredQty.valid && ingredQty.touched">Ingredient Quantity is required</span>
+      </div>
+    </div>
+    <div class="col-sm-3 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">P</div>
+        </div>
+        <input type="text" class="form-control" name="ingredPrice" placeholder="Ingredient Price" ngModel required #ingredPrice="ngModel">
+        <span class="text-danger" *ngIf="!ingredPrice.valid && ingredPrice.touched">Ingredient Price is required</span>
+      </div>
+    </div>
+    <div class="col-sm-3 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">I</div>
+        </div>
+        <input type="text" class="form-control" name="ingredImg" placeholder="Ingredient Image" ngModel required #ingredImg="ngModel">
+        <span class="text-danger" *ngIf="!ingredImg.valid && ingredImg.touched">Ingredient Image is required</span>
+      </div>
+    </div>
+    <div class="col-auto my-1">
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-info" (click)="addDefaultQuantity()">Add Default Quantity</button>
+    <button type="button" class="btn btn-info" (click)="setDefaultValues()">Set Form Values</button>
+    </div>
+  </div>
+</form>

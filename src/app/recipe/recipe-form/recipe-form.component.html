@@ -1,0 +1,31 @@
+<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="recipeName">Recipe Name</label>
+        <input type="text" class="form-control" id="recipeName" formControlName="rName">
+        <span class="text-danger" *ngIf="!recipeForm.get('rName').valid && recipeForm.get('rName').touched">Recipe Name is required</span>
+    </div>
+    <div class="form-group">
+        <label for="imgPath">Recipe Image Path</label>
+        <input type="text" class="form-control" id="imgPath" formControlName="rImgPath">
+        <span class="text-danger" *ngIf="!recipeForm.get('rImgPath').valid && recipeForm.get('rImgPath').touched">Recipe Image Path is required</span>
+    </div>
+    <div class="form-group">
+        <label for="preparationTime">Recipe Preparation Time</label>
+        <input type="text" class="form-control" id="preparationTime" formControlName="rPrep">
+        <span class="text-danger" *ngIf="!recipeForm.get('rPrep').valid && recipeForm.get('rPrep').touched">Recipe Preparation Time is required</span>
+    </div>
+    <div class="form-group">
+        <label for="recipeDesc">Recipe Description</label>
+        <textarea name="recipeDesc" cols="30" rows="5" class="form-control" id="recipeDesc" formControlName="rDesc"></textarea>
+        <span class="text-danger" *ngIf="!recipeForm.get('rDesc').valid && recipeForm.get('rDesc').touched">
+            <ng-container *ngIf="recipeForm.get('rDesc').errors?.['required']">Recipe Description is required</ng-container>
+            <!-- Recipe Description is required -->
+            <ng-container *ngIf="recipeForm.get('rDesc').errors?.['minlength']">
+                Recipe Description length should be 20
+                <span>Please add {{recipeForm.get('rDesc').errors?.['minlength']?.requiredLength -
+                    recipeForm.get('rDesc').errors?.['minlength']?.actualLength}} more letters</span>
+            </ng-container>
+        </span>
+    </div>
+        <button class="btn btn-block btn-primary">{{isNewRecipe ? 'create Recipe' : 'Update Recipe'}}</button>
+</form>

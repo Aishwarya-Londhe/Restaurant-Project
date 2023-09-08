@@ -1,0 +1,18 @@
+<!-- <p>recipe works</p> -->
+<div class="row">
+    <div class="col-6">
+        <!-- <app-recipe-list (tellToParentRecipe)="listenFromChildList($event)"></app-recipe-list> -->
+        <!-- <app-recipe-list (tellToParentRecipe)="selectedRecipe = $event"></app-recipe-list> -->
+        <app-recipe-list></app-recipe-list>
+    </div>
+    <div class="col-6">
+        <!-- <app-recipe-details [currentRecipe]="selectedRecipe" *ngIf="selectedRecipe; else noRecipeSelected"></app-recipe-details>
+        <ng-template #noRecipeSelected>
+            <h2>
+                <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+                Please select a recipe from the list
+            </h2>
+        </ng-template> -->
+        <router-outlet></router-outlet>
+    </div>
+</div>

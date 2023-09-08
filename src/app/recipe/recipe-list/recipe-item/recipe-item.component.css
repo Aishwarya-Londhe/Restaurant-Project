@@ -1,0 +1,19 @@
+.my-recipe-item{
+    display: flex;
+}
+
+.my-recipe-item div:first-child{
+    flex: 5;
+}
+
+.my-recipe-item div:first-child p{
+    margin: 0;
+}
+
+.my-recipe-item div:last-child{
+    flex: 1;
+}
+
+.my-recipe-item div:last-child img{
+    width: 100%;
+}

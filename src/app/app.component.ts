@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Recipe } from './shared/model/recipe.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'project-one';
+  selectedPage : any = 'shopping';
+  
+  // listenFromChildHeader(eveData : any){
+  //   console.log("listenFromChildHeader trigger", eveData);
+  //   this.selectedPage =eveData;
+  // }
 }

@@ -1,0 +1,22 @@
+/* .my-ingredient-item div{
+    color: black;
+}
+
+a{
+    text-decoration: none;
+} */
+
+.my-ingredient-item{
+    color: #424242;
+}
+
+.my-ingredient-item:hover{
+    text-decoration: none;
+    background-color: #0547fd33;
+    cursor: pointer;
+}
+
+.my-ingredient-item img{
+    box-shadow: 0px 4px 10px 5px #00000038;
+    border-radius: 5px;
+}

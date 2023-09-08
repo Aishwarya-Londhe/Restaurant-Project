@@ -1,0 +1,7 @@
+<!-- <p>recipe-details works</p> -->
+<!-- {{currentRecipe | json}} -->
+<img [src]="currentRecipe.imgPath" [alt]="currentRecipe.imgPath" class="w-100">
+<h1>{{currentRecipe.name}}</h1>
+<p>Description : <span class="small">{{currentRecipe.desc}}</span></p>
+<p>Preparation time : <span class="small">{{currentRecipe.preparationTime}} minutes</span></p>
+<button class="btn btn-info btn-block btn-sm text-center" routerLink="edit-recipe"><i class="fa fa-pencil-square-o mr-3" aria-hidden="true"></i>Edit Recipe</button>

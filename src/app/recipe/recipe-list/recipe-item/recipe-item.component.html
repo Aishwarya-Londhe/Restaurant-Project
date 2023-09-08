@@ -1,0 +1,11 @@
+<!-- <a class="list-group-item list-group-item-action my-recipe-item" aria-current="true" (click)="recipeItemClicked()"> -->
+<a class="list-group-item list-group-item-action my-recipe-item" aria-current="true" [routerLink]="[recIndex]">
+    <div>
+        <h3>{{rec.name}}</h3>
+        <p>{{rec.desc}}</p>
+        <span class="small">Preparation time : {{rec.preparationTime}} minutes</span>
+    </div>
+    <div>
+        <img [src]="rec.imgPath" [alt]="rec.imgPath">
+    </div>
+</a>

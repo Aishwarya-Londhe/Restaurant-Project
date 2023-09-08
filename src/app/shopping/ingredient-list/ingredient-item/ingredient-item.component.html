@@ -1,0 +1,15 @@
+<a class="list-group-item my-ingredient-item">
+    <div class="row">
+        <div class="col-2 text-center">
+            <h3>{{ingredient.iName}}</h3>
+            <img [src]="ingredient.iImg" alt="ingredient.iImg" class="w-100">
+            <div class="small">{{ingredient.iBrand}}</div>
+        </div>
+        <div class="col-6 text-center">
+            <h5>Quantity : {{ingredient.iQty}}</h5>
+        </div>
+        <div class="col-4 text-right">
+            <h2>Price : {{ingredient.iPrice | currency:'INR'}}</h2>
+        </div>
+    </div>
+</a>
